@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cart | S.A.V.E.</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .pay-icon {
+      width: 35px; /* Adjust size as needed */
+      height: auto;
+      vertical-align: middle;
+      }
+  
+    label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+  
+ 
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <img src="assets/logo.svg" alt="Logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="challenges.html">Challenges</a>
+      <a href="marketplace.html">Marketplace</a>
+      <a href="art.html">Art Gallery</a>
+      <a href="recycle.html">ReCycle</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="cart.html" class="active nav-cart">🛒<span id="cart-count">0</span></a>
+      <span class="nav-points">Points: <span id="user-points">0</span></span>
+      <a href="signup.html" class="nav-signup">Sign Up</a>
+      <a href="login.html" class="nav-login">Login</a>
+      <a href="#" class="nav-logout">Logout</a>
+    </nav>
+  </header>
+  <div class="page-header">Your Cart</div>
+  <main class="container wide">
+    <ul id="cart-list"></ul>
+    <p><strong>Total:</strong> <span id="cart-total">0.000 BHD</span></p>
+    <h3>Proceed to Checkout</h3>
+    <form id="checkout-form">
+      <label>
+        <input type="radio" name="method" value="apple" required>
+        <img src="images/apple pay.png" class="pay-icon" alt="Apple Pay">
+        Apple Pay
+      </label>
+      <label><input type="radio" name="method" value="benefit"><img src="images/benefitpay.png" class="pay-icon" alt="Benefit Pay">Benefit Pay</label>
+      <label><input type="radio" name="method" value="card"><img src="images/card.png" class="pay-icon" alt="Credit Card">Credit/Debit Card</label>
+      <hr>
+      <label>
+        <input type="checkbox" id="use-points">
+        Use my points for discount
+      </label>
+      <p id="discount-info" style="display:none; margin-top: .5rem;"></p>
+      <hr>      
+      <button type="submit" class="btn btn-primary">Pay Now</button>      
+    </form>
+  </main>
+  <footer class="footer">© <span id="year"></span> S.A.V.E.</footer>
+  <script src="js/nav.js"></script>
+  <script src="js/cart.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
