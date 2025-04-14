@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Marketplace | S.A.V.E.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <img src="logo.svg" alt="Logo" class="logo">
+    <nav>
+      <a href="index.html" >Home</a>
+      <a href="challenges.html">Challenges</a>
+      <a href="marketplace.html" class="active">Marketplace</a>
+      <a href="art.html">Art Gallery</a>
+      <a href="recycle.html">ReCycle</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="cart.html" class="nav-cart">🛒<span id="cart-count">0</span></a>
+      <span class="nav-points">Points: <span id="user-points">0</span></span>
+      <a href="signup.html" class="nav-signup">Sign Up</a>
+      <a href="login.html" class="nav-login">Login</a>
+      <a href="#" class="nav-logout">Logout</a>
+    </nav>
+  </header>
+  <div class="page-header"><strong>Upcycling Marketplace</strong></div>
+  <main class="container wide">
+    <p class="intro">
+      Browse eco‑friendly items and add to cart. Or list your own upcycled creation below and earn <strong>10 points</strong> per listing!
+    </p>
+    <h4>Featured Shop Items</h4>
+    <div id="shop-items" class="listings"></div>
+    <h4>Your Listings</h4>
+    <form id="listing-form">
+      <label>Item Title:</label>
+      <input type="text" name="title" required>
+      <label>Description:</label>
+      <textarea name="desc" rows="8" required style="resize:none;"></textarea>
+      <label>Price (BHD):</label>
+      <input type="number" name="price" step="0.001" required>
+      <label>Image:</label>
+      <input type="file" name="image" accept="image/*">
+      <button type="submit" class="btn btn-primary" style="margin-top: 1.5rem;">Post Listing</button>
+    </form>
+    <div id="user-listings" class="listings"></div>
+    <section class="rewards">
+      <h4>Monthly Seller Prize</h4>
+      <p>The top‑selling creator each month wins a <strong>10 BHD voucher</strong> and a featured spot on our homepage!</p>
+    </section>
+  </main>
+  <footer class="footer">© <span id="year"></span> S.A.V.E.</footer>
+  <script src="nav.js"></script>
+  <script src="marketplace.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
