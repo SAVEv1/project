@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | S.A.V.E.</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="navbar">
+    <img src="Logo.png" alt="Logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="challenges.html">Challenges</a>
+      <a href="marketplace.html">Marketplace</a>
+      <a href="art.html">Art Gallery</a>
+      <a href="recycle.html">ReCycle</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html" class="active">Contact Us</a>
+      <a href="cart.html" class="nav-cart">🛒<span id="cart-count">0</span></a>
+      <span class="nav-points">Points: <span id="user-points">0</span></span>
+      <a href="signup.html" class="nav-signup">Sign Up</a>
+      <a href="login.html" class="nav-login">Login</a>
+      <a href="#" class="nav-logout">Logout</a>
+    </nav>
+  </header>
+
+  <div class="page-header"><strong>Contact Us</strong></div>
+  <main class="container wide">
+    <p class="intro">
+      Have a question, suggestion, or feedback? We'd love to hear from you! Just fill out the form below and we’ll get back to you as soon as possible.
+    </p>
+
+    <form id="contact-form" class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+      <p id="form-response" class="hidden"></p>
+    </form>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> S.A.V.E.</footer>
+
+  <script src="nav.js"></script>
+  <script src="contact.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

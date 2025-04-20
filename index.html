@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>S.A.V.E. | Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <img src="Logo.png" alt="Logo" class="logo">
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="challenges.html">Challenges</a>
+      <a href="marketplace.html">Marketplace</a>
+      <a href="art.html">Art Gallery</a>
+      <a href="recycle.html">ReCycle</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="cart.html" class="nav-cart">🛒<span id="cart-count">0</span></a>
+      <span class="nav-points">Points: <span id="user-points">0</span></span>
+      <a href="signup.html" class="nav-signup">Sign Up</a>
+      <a href="login.html" class="nav-login">Login</a>
+      <a href="#" class="nav-logout">Logout</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <!-- <img src="assets/logo.svg" alt="Logo" class="hero-logo">
+      <h1>Welcome to S.A.V.E.</h1>
+      <p>Your Favourite Website for Saving and Valuing Earth.</p>
+      <a href="signup.html" class="btn btn-primary hero-btn">Sign Up</a>
+      <a href="login.html" class="btn btn-primary hero-btn">Login</a> -->
+      <img src="main.jpg" alt="banner">
+    </section>
+
+    <section class="container">
+      <h2>Top Users</h2>
+      <div class="top-users">
+        <div class="user-card">
+          <div class="diamond">💎</div>
+          <div>
+            <h4>Ahmed <span class="membership">Platinum</span></h4>
+            <p>Points: 485 | Items: 15 | Arts: 1 | Purchases: 5</p>
+            <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
+            <p class="testimonial">"S.A.V.E. turned recycling into a game—I’ve never been more motivated 🔥"</p>
+          </div>
+        </div>
+        <div class="user-card">
+          <div class="diamond">💠</div>
+          <div>
+            <h4>Noor <span class="membership">Gold</span></h4>
+            <p>Points: 440 | Items: 12 | Arts: 2 | Purchases: 7</p>
+            <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
+            <p class="testimonial">"The Art Gallery inspired me to upcycle creatively ✨"</p>
+          </div>
+        </div>
+        <div class="user-card">
+          <div class="diamond">🔹</div>
+          <div>
+            <h4>Fatima <span class="membership">Silver</span></h4>
+            <p>Points: 350 | Items: 10 | Arts: 0 | Purchases: 3</p>
+            <p class="stars">⭐️⭐️⭐️⭐️</p>
+            <p class="testimonial">"Challenges built my recycling habits 😍"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">© <span id="year"></span> S.A.V.E.</footer>
+  <script src="nav.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
